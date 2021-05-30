@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A plugin dedicated for vue3 to show confirm dialog modal.",
   "main": "dist/index.js",
-  "release": {
-    "branches": ["main"]
-  },
   "typings": "dist/types/index.d.ts",
   "types": "dist/types/index.d.ts",
   "scripts": {
