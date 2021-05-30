@@ -2,10 +2,12 @@
   "name": "v3confirm",
   "version": "1.0.0",
   "description": "A plugin dedicated for vue3 to show confirm dialog modal.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "release": {
-    "branches": [ "main" ]
+    "branches": ["main"]
   },
+  "typings": "dist/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
