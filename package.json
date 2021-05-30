@@ -1,6 +1,6 @@
 {
   "name": "v3confirm",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "A plugin dedicated for vue3 to show confirm dialog modal.",
   "main": "dist/index.js",
   "typings": "dist/types/index.d.ts",
