@@ -53,9 +53,12 @@ Then in component with composition api:
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import { useConfirm } from 'v3confirm'
 
   export default defineComponent({
     setup: () => {
+      const confirm = useConfirm()
+      
       const deleteAllUsers = () => {
         confirm.show('Are you sure?').then((ok) => {
           if (ok) {
