@@ -105,4 +105,9 @@ A text used for decline button.
 
 # Styles
 
-This project is using bulma styles.
+This project is using bulma.io styles. If your project is not using bulma, then you can style confirm for your own or [import](https://bulma.io/documentation/overview/modular/) bulma modal. 
+
+```scss
+@import "bulma/sass/utilities/_all.sass"
+@import "bulma/sass/components/modal.sass"
+```
