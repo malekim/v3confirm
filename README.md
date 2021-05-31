@@ -36,6 +36,14 @@ app.use(VueConfirmPlugin, {
 app.mount('#app')
 ```
 
+Remember to have a html handler somewhere with id provided in root option. For example in App.vue:
+
+```html
+<template>
+  <div id="confirm"></div>
+</template>
+```
+
 Then in component with composition api:
 
 ```html
