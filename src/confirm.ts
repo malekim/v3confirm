@@ -1,6 +1,5 @@
 import { defineComponent, ref, h } from 'vue'
 
-// import Confirm from '@/plugins/confirm/Confirm.vue'
 const renderConfirm = (
   resolve: (value: boolean | PromiseLike<boolean>) => void
 ): ReturnType<typeof defineComponent> => {
@@ -80,7 +79,7 @@ const renderConfirm = (
                         h(
                           'button',
                           {
-                            class: 'button',
+                            class: 'button is-confirm',
                             onClick: () => this.confirm(),
                           },
                           this.yesText
@@ -88,7 +87,7 @@ const renderConfirm = (
                         h(
                           'button',
                           {
-                            class: 'button',
+                            class: 'button is-discard',
                             onClick: () => this.discard(),
                           },
                           this.noText
