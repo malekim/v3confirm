@@ -13,9 +13,9 @@ jobs:
       with:
         node-version: 12
     - name: Install
-      run: npm install -D vuepress@next
+      run: npm ci
     - name: Build vuepress
-      run: npx vuepress build
+      run: npm run docs
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
