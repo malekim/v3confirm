@@ -1,0 +1,29 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Clean install
+      run: npm ci
+    - name: Test
+      run: npm run test
+    - name: Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage/coverage-final.json
+    - name: Slack Notification
+      uses: lazy-actions/slatify@v3.0.0
+      if: always()
+      with:
+        type: ${{ job.status }}
+        job_name: 'Github'
+        channel: '#github'
+        url: ${{ secrets.SLACK_WEBHOOK }}
