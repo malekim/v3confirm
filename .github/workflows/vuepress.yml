@@ -13,7 +13,7 @@ jobs:
       with:
         node-version: 12
     - name: Install
-      run: npm install -D vuepress
+      run: npm install -D vuepress@next
     - name: Build vuepress
       run: npx vuepress build
     - name: Deploy
