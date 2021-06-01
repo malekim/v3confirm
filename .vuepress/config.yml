@@ -1,0 +1,16 @@
+base: '/v3confirm/'
+title: 'malekim/v3confirm'
+dest: 'docs'
+description: 'A plugin dedicated for vue3 to show confirm dialog modal.'
+themeConfig:
+  repo: 'malekim/v3confirm'
+  sidebar:
+    '/': [
+      {
+        title: 'Introduction',
+        collapsable: false,
+        children: [
+          '',
+        ]
+      }
+    ]
