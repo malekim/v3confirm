@@ -54,45 +54,37 @@ const renderConfirm = (
             h(
               'div',
               {
-                class: 'modal-content',
+                class: 'modal-card modal-confirm',
               },
               [
                 h(
-                  'div',
+                  'header',
                   {
-                    class: 'modal-card modal-confirm',
+                    class: 'modal-card-head',
+                  },
+                  this.text
+                ),
+                h(
+                  'footer',
+                  {
+                    class: 'modal-card-foot',
                   },
                   [
                     h(
-                      'header',
+                      'button',
                       {
-                        class: 'modal-card-head',
+                        class: 'button is-confirm',
+                        onClick: () => this.confirm(),
                       },
-                      this.text
+                      this.yesText
                     ),
                     h(
-                      'footer',
+                      'button',
                       {
-                        class: 'modal-card-foot',
+                        class: 'button is-discard',
+                        onClick: () => this.discard(),
                       },
-                      [
-                        h(
-                          'button',
-                          {
-                            class: 'button is-confirm',
-                            onClick: () => this.confirm(),
-                          },
-                          this.yesText
-                        ),
-                        h(
-                          'button',
-                          {
-                            class: 'button is-discard',
-                            onClick: () => this.discard(),
-                          },
-                          this.noText
-                        ),
-                      ]
+                      this.noText
                     ),
                   ]
                 ),
